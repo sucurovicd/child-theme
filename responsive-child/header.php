@@ -97,15 +97,9 @@ if( !defined( 'ABSPATH' ) ) {
 		);
 		?>
 
-		<?php if( has_nav_menu( 'sub-header-menu', 'responsive' ) ) { ?>
-			<?php wp_nav_menu( array(
-								   'container'      => '',
-								   'menu_class'     => 'sub-header-menu',
-								   'theme_location' => 'sub-header-menu'
-							   )
-			);
-			?>
-		<?php } ?>
+		<?php 
+                    nav_bar($post->ID);
+                ?>
 
 		<?php responsive_header_bottom(); // after header content hook ?>
 
