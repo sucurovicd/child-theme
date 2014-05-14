@@ -5,6 +5,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+register_sidebar(array(
+    'name' => 'Shop left sidebar',
+    'id' => 'shopleftsidebar',
+    'description' => 'Left Sidebar for Shop',
+    'before_widget' => '<div class="widget-shop-left-sidebar">',
+    'after_widget' => '</div>',
+));
+
 function get_root_parent($page_id) {
 global $wpdb;
     $parent = $wpdb->get_var("SELECT post_parent FROM $wpdb->posts WHERE post_type='page' AND ID = '$page_id'");
