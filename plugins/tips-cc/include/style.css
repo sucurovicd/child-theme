@@ -1,0 +1,26 @@
+/*
+**************TIPS STYLE*************
+*/
+.tips hr{
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 1px;
+    background: #5294c1;
+    margin-bottom: 1em;
+}
+.tips{
+    font-size:12px;
+}
+.tips p{
+
+    margin: 0.6em 0 1.2em;
+    padding: 0;
+}
+.tips a{
+    color: #4EA000;
+    display: block;
+    font-weight: bold;
+    margin-top: 0.5em;
+    text-align: right;
+}
