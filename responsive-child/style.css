@@ -272,7 +272,9 @@ color: #000000;
 .breadcrumb-list{
     margin: 0 0 20px 20px;
 }
-
+/*
+*******Shop Left Sidebar********
+*/
 #shop-left-sidebar{
     margin: 0;
     padding: 0;
@@ -307,7 +309,19 @@ color: #000000;
     margin: 0;
     font-weight: bold;
 }
+.chosen, .chosen > a{
+    color:red;
+    font-weight:bold;
+}
 
+.current-cat, .current-cat > a {
+    color: red;
+    font-weight: bold;
+}
+
+/*
+**********Product Page *********
+*/
 .product {
 }
 .product > .images{
@@ -330,8 +344,6 @@ color: #000000;
 #tab-reviews{
 
 }
-
-.col-300{}
 
 .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images{
     width:35%;  
