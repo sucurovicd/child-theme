@@ -243,3 +243,32 @@ color: #000000;
     background-image: linear-gradient(to bottom, #9A9A9A 0%, #FBFBFB 100%);
 
  }
+
+ .side_menu .pagenav{
+                 list-style-type: none;
+                 color: black;
+                 font-weight: bold;
+                 font-size: 1.2em;
+             }
+.side_menu .page_item a{
+    color: #666;
+    border-bottom: 1px dotted black;
+    line-height: 30px;
+    padding: 5px;
+    background-color: #fafafa;
+    font-size: 0.7em;
+}
+
+.side_menu .page_item a:hover{
+    color: #666;
+    text-decoration: none;
+    background-color: #f7eedb;
+}
+
+.side_menu .page_item ul{
+    padding: 0 0 0 20px;
+}
+
+.breadcrumb-list{
+    margin: 0 0 20px 20px;
+}
