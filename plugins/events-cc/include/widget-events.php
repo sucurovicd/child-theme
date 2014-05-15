@@ -80,7 +80,7 @@ class Upcomming_events_Widget extends WP_Widget {
             </div>
             <div class="text">
                <a href=""><?php the_title(); ?></a><br/>
-            <span><?php echo $this->content(20); ?></span>
+            <span><?php echo $this->content(55); ?></span>
         </div>
         </div>
 
