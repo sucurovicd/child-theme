@@ -97,9 +97,7 @@ if( !defined( 'ABSPATH' ) ) {
 		);
 		?>
 
-		<?php 
-                    nav_bar($post->ID);
-                ?>
+		
 
 		<?php responsive_header_bottom(); // after header content hook ?>
 
@@ -110,3 +108,4 @@ if( !defined( 'ABSPATH' ) ) {
 	<div id="wrapper" class="clearfix">
 <?php responsive_wrapper_top(); // before wrapper content hook ?>
 <?php responsive_in_wrapper(); // wrapper hook ?>
+<?php nav_bar($post->ID); ?>

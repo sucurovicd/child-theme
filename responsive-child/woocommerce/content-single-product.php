@@ -25,8 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 }
 ?>
 
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>">
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook
@@ -55,11 +54,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                          //Pomeram sifru i kategoriju odmah ispod naslova
                          remove_action('woocommerce_single_product_summary','woocommerce_template_single_meta',40);
                          add_action ('woocommerce_single_product_summary', 'woocommerce_template_single_meta',7);
-                
+                         remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+                         add_action ('woocommerce_single_product_summary','woocommerce_template_single_excerpt', 8);
+                         
 			do_action( 'woocommerce_single_product_summary' );
 		?>
 
-	</div><!-- .summary -->
 
 	<?php
 		/**
@@ -70,6 +70,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 */
 		do_action( 'woocommerce_after_single_product_summary' );
 	?>
+        </div><!-- .summary -->
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 

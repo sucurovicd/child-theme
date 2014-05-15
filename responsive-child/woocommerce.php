@@ -21,12 +21,19 @@ if( !defined( 'ABSPATH' ) ) {
  */
 
 get_header(); ?>
-
-<div id="content" class="">
-
-            <?php woocommerce_content(); ?>     
-
-
-</div><!-- end of #content -->
-
+<?php //get_responsive_breadcrumb_lists();?>
+    <div id="content" class="grid col-940">
+    <?php if (!is_product()):?>
+    <div class="grid col-300 fit">
+        <div id="shop-left-sidebar-categories">
+            <?php dynamic_sidebar('shopleftsidebar') ?>
+        </div>
+    </div>
+    <div id="content" class="grid col-620">
+        <?php woocommerce_content(); ?>     
+    </div>
+    <?php else: ?>
+        <?php woocommerce_content(); ?>     
+    <?php endif; ?>
+    </div>
 <?php get_footer(); ?>
