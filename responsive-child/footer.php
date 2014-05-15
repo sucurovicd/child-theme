@@ -26,11 +26,7 @@ if( !defined( 'ABSPATH' ) ) {
 global $responsive_options;
 $responsive_options = responsive_get_options();
 ?>
-<?php responsive_wrapper_bottom(); // after wrapper content hook ?>
-</div><!-- end of #wrapper -->
-<?php responsive_wrapper_end(); // after wrapper hook ?>
-</div><!-- end of #container -->
-<?php responsive_container_end(); // after container hook ?>
+
 
 <div id="footer" class="clearfix">
 	<?php responsive_footer_top(); ?>
@@ -87,6 +83,12 @@ $responsive_options = responsive_get_options();
 	<?php responsive_footer_bottom(); ?>
 </div><!-- end #footer -->
 <?php responsive_footer_after(); ?>
+
+<?php responsive_wrapper_bottom(); // after wrapper content hook ?>
+</div><!-- end of #wrapper -->
+<?php responsive_wrapper_end(); // after wrapper hook ?>
+</div><!-- end of #container -->
+<?php responsive_container_end(); // after container hook ?>
 
 <?php wp_footer(); ?>
 </body>
