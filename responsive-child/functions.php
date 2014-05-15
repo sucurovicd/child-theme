@@ -137,3 +137,20 @@ function side_nav_menu($page_id){
            echo '</div>';
     }
   }
+/* *************** SIDEBAR**************** */
+   /**
+    * Creates a sidebar
+    * @param string|array  Builds Sidebar based off of 'name' and 'id' values.
+    */
+    $args = array(
+        'name'          => __( 'Events sidebar', 'theme_text_domain' ),
+        'id'            => 'events-sidebar',
+        'description'   => '',
+        'class'         => '',
+        'before_widget' => '<div class="event">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>'
+    );
+
+    register_sidebar( $args );
