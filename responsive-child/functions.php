@@ -11,6 +11,18 @@ function sb_woo_remove_reviews_tab($tabs) {
  unset($tabs['reviews']);
  return $tabs;
 }
+//Promena imena prve stavke u breadcumb u woocomercu iz Home u Shop
+add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_home_text' );
+function jk_change_breadcrumb_home_text($defaults){
+    // Change the breadcrumb home text from 'Home' to 'Appartment'
+    $defaults['home']='Shop';
+    return $defaults;
+}
+//Breadcrumb u prodavnici, kad se klikne na shop vodi u prodavnicu,a ne na homepage
+add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
+function woo_custom_breadrumb_home_url(){
+    return get_permalink(woocommerce_get_page_id('shop'));
+}
 
 
 register_sidebar(array(

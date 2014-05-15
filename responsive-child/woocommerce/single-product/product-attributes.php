@@ -21,10 +21,11 @@ $sku = $product->get_sku();
 
 ob_start();
 //Dodavanje Sifre proizvoda (SKU) u dodatne informacije
+//Alt sluzi za prebrojavanje, svaki paran ima pozadinu
 ?>
 <table class="shop_attributes">
     <?php if(!empty($sku)):?>
-    <tr><th>SKU:</th><td><?php echo $product->get_sku()?></td></tr>
+    <tr class="<?php if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>"><th>SKU:</th><td><?php echo $product->get_sku()?></td></tr>
     <?php endif; ?>
 	
     <?php if ( $product->enable_dimensions_display() ) : ?>

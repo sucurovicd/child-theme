@@ -25,6 +25,9 @@ get_header(); ?>
     <div id="content" class="grid col-940">
     <?php if (!is_product()):?>
     <div class="grid col-300 fit">
+        <div id="breadcrumb">
+            <?php woocommerce_breadcrumb(); ?>
+        </div>
         <div id="shop-left-sidebar-categories">
             <?php dynamic_sidebar('shopleftsidebar') ?>
         </div>
@@ -33,6 +36,9 @@ get_header(); ?>
         <?php woocommerce_content(); ?>     
     </div>
     <?php else: ?>
+        <div id="breadcrumb">
+            <?php woocommerce_breadcrumb(); ?>
+        </div>
         <?php woocommerce_content(); ?>     
     <?php endif; ?>
     </div>
