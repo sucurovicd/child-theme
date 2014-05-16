@@ -480,4 +480,7 @@ headerimage_none_color {
   right: 0;
 }
 
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+.second-menu .current-menu-item a{
+    background-color: #FBFBFB;
+    background-image: linear-gradient(to bottom, #9a9a9a 0%, #fbfbfb 100%);
+}
