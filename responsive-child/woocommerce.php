@@ -23,22 +23,20 @@ if( !defined( 'ABSPATH' ) ) {
 get_header(); ?>
 <?php //get_responsive_breadcrumb_lists();?>
     <div id="content" class="grid col-940">
-    <?php if (!is_product()):?>
-    <div class="grid col-300 fit">
         <div id="breadcrumb">
             <?php woocommerce_breadcrumb(); ?>
         </div>
+    <?php if (!is_product()):?>
+    <div id="content" class="grid col-700 right">
+        <?php woocommerce_content(); ?>     
+    </div>
+    <div class="grid col-220 fit left-sidebar">
         <div id="shop-left-sidebar-categories">
             <?php dynamic_sidebar('shopleftsidebar') ?>
         </div>
     </div>
-    <div id="content" class="grid col-620">
-        <?php woocommerce_content(); ?>     
-    </div>
+
     <?php else: ?>
-        <div id="breadcrumb">
-            <?php woocommerce_breadcrumb(); ?>
-        </div>
         <?php woocommerce_content(); ?>     
     <?php endif; ?>
     </div>

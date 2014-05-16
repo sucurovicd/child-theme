@@ -152,8 +152,7 @@ color: #000000;
     margin: 0.6em 0 1.2em;
 }
 #content{
-    margin-left: 25px;
-    margin-right: 25px;
+    margin: 0;
 }
 /*
 ***********WIDGETS***********
@@ -277,6 +276,10 @@ color: #000000;
 .breadcrumb-list{
     margin: 0 0 20px 20px;
 }
+#breadcrumb{
+    padding: 0;
+    margin: 10px;
+}
 /*
 ******************FOOTER************
 */
@@ -319,20 +322,39 @@ margin-top: 5em;
     padding: 12px 15px 5px 15px;
     margin: 0;
     float:left;
-    margin-top: 50px;
-    
+    margin: 10px;
+    width: 80%;
+}
+#shop-left-sidebar-categories ul{
+    list-style-type: none;
+    padding-left: 0;
 }
 .widget-shop-left-sidebar{
     padding-bottom: 20px;
 }
-
+.widget-shop-left-sidebar .cat-item{
+    display: none;
+}
+.widget-shop-left-sidebar .current-cat, .widget-shop-left-sidebar .cat-parent, .widget-shop-left-sidebar .children li {
+    display:block;
+}
+.widget-shop-left-sidebar .current-cat-parent > a{
+    font-size: 1.3em;
+    font-weight:bold;
+}
 .widget-shop-left-sidebar a {
     color: black;
 }
 
-.shop-content{
+.widget-shop-left-sidebar a:hover {
+    text-decoration: underline;
 }
-
+.widget-shop-left-sidebar h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+}
 .widget-shop-left-sidebar a:visited{
     text-color: black;
 }
@@ -352,6 +374,13 @@ margin-top: 5em;
     color: red;
     font-weight: bold;
 }
+mark{ 
+    background:none; 
+}
+small {
+    font-size: 0.9em;
+}
+
 
 /*
 **********Product Page *********
@@ -426,7 +455,7 @@ border-color: #860000;
 }
 
 .variations_form > table {
-    width: 60%;
+    width: 70%;
 }
 /*
 ******Pozadinska slika, boje H1 tagova.... ****
@@ -478,7 +507,10 @@ headerimage_none_color{
     color: black;
 }
 #container{
-    position: absolute;
     z-index: 1;
     top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
+
