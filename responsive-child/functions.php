@@ -137,20 +137,40 @@ function side_nav_menu($page_id){
            echo '</div>';
     }
   }
-/* *************** SIDEBAR**************** */
-   /**
-    * Creates a sidebar
-    * @param string|array  Builds Sidebar based off of 'name' and 'id' values.
-    */
-    $args = array(
-        'name'          => __( 'Events sidebar', 'theme_text_domain' ),
-        'id'            => 'events-sidebar',
-        'description'   => '',
-        'class'         => '',
-        'before_widget' => '<div class="event">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h2 class="widgettitle">',
-        'after_title'   => '</h2>'
-    );
+	/* *************** SIDEBAR**************** */
+	   /**
+	    * Creates a sidebar
+	    * @param string|array  Builds Sidebar based off of 'name' and 'id' values.
+	    */
+	    $args = array(
+	        'name'          => __( 'Events sidebar', 'theme_text_domain' ),
+	        'id'            => 'events-sidebar',
+	        'description'   => '',
+	        'class'         => '',
+	        'before_widget' => '<div class="event">',
+	        'after_widget'  => '</div>',
+	        'before_title'  => '<h2 class="widgettitle">',
+	        'after_title'   => '</h2>'
+	    );
+	
+	    register_sidebar( $args );
 
-    register_sidebar( $args );
+//Menja style u zavisnosti od trenutne stranice
+function style($page_id){
+    //Saznajemo koji je root stranice gde se nalazimo
+    $pocetak = get_the_title(get_root_parent($page_id));
+    //Izlistavamo sve menije
+    $menus = Get_All_Wordpress_Menus()[0]->name;
+    //Izlistavamo sve podmenije
+    $sub_menus = Get_sub_menus($menus);
+    //ako je naziv roota trenutne stranice isti sa imenom nekog podmenija, menjamo mu boju
+    if ($pocetak == $sub_menus[2]->title)
+        return "blue";
+    elseif($pocetak == $sub_menus[1]->title)
+        return "green";
+    elseif(is_front_page())
+        return "none_color";
+    else {
+        return 'red';
+    }
+}

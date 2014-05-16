@@ -45,6 +45,9 @@ if( !defined( 'ABSPATH' ) ) {
 	</head>
 
 <body <?php body_class(); ?>>
+    <div class="headerimage_<?php echo style($post->ID)?>">
+</div>
+
 
 <?php responsive_container(); // before container hook ?>
 <div id="container" class="hfeed">
@@ -103,9 +106,8 @@ if( !defined( 'ABSPATH' ) ) {
 
 	</div><!-- end of #header -->
 <?php responsive_header_end(); // after header container hook ?>
-
 <?php responsive_wrapper(); // before wrapper container hook ?>
-	<div id="wrapper" class="clearfix">
+	<div id="wrapper" class="clearfix <?php echo style($post->ID)?>">
 <?php responsive_wrapper_top(); // before wrapper content hook ?>
 <?php responsive_in_wrapper(); // wrapper hook ?>
 <?php nav_bar($post->ID); ?>

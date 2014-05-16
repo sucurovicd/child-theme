@@ -81,14 +81,14 @@ body{
     margin-right: 25px;
 
 }
-.main-nav > ul > li:nth-child(1){
+.main-nav > ul > li:nth-child(3){
     background-color: #027AC6;
 
 }
 .main-nav> ul > li:nth-child(2){
     background-color: #5EA939
 }
-.main-nav > ul > li:nth-child(3){
+.main-nav > ul > li:nth-child(1){
     background-color: #CD371A
 }
 .menu a:hover{
@@ -137,7 +137,7 @@ color: #000000;
 /*
 ************CONTENT*********
 */
-#content h1{
+#wrapper h1{
     font-size: 2em;
     font-weight: bold;
     background: #ECEAEF;
@@ -147,7 +147,7 @@ color: #000000;
     padding-left: 10px;
 
 }
-#content p {
+#wrapper p {
     font-size: 14px;
     margin: 0.6em 0 1.2em;
 }
@@ -365,8 +365,7 @@ margin-top: 5em;
 .product > .entry-summary{
 
 }
-.product > .woocommerce-tabs{
-
+.woocommerce-tabs > ul{
 }
 
 #tab-description{
@@ -377,6 +376,45 @@ margin-top: 5em;
 }
 #tab-reviews{
 
+}
+.woocommerce #content input.button.alt, .woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, 
+.woocommerce-page #content input.button.alt, .woocommerce-page #respond input#submit.alt, 
+.woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt{
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.22, #bc8989),
+	color-stop(1, #b10303)
+);
+background-image: -o-linear-gradient(bottom, #bc8989 22%, #b10303 100%);
+background-image: -moz-linear-gradient(bottom, #bc8989 22%, #b10303 100%);
+background-image: -webkit-linear-gradient(bottom, #bc8989 22%, #b10303 100%);
+background-image: -ms-linear-gradient(bottom, #bc8989 22%, #b10303 100%);
+background-image: linear-gradient(to bottom, #bc8989 22%, #b10303 100%);
+border-radius: 10px;
+border-color: #860000;
+}
+
+.woocommerce #content input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, 
+.woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, 
+.woocommerce-page #content input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, 
+.woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover{
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.22, #F078A8),
+	color-stop(1, #FF0000)
+);
+background-image: -o-linear-gradient(bottom, #F078A8 22%, #FF0000 100%);
+background-image: -moz-linear-gradient(bottom, #F078A8 22%, #FF0000 100%);
+background-image: -webkit-linear-gradient(bottom, #F078A8 22%, #FF0000 100%);
+background-image: -ms-linear-gradient(bottom, #F078A8 22%, #FF0000 100%);
+background-image: linear-gradient(to bottom, #F078A8 22%, #FF0000 100%);
+border-radius: 10px;
+border-color: #860000;
 }
 
 .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images{
@@ -389,4 +427,58 @@ margin-top: 5em;
 
 .variations_form > table {
     width: 60%;
+}
+/*
+******Pozadinska slika, boje H1 tagova.... ****
+*/
+.headerimage_red {
+    background-image: url('images/gradientred.png');
+    height: 245px;
+    overflow: hidden;
+    margin-top: 0px;
+    z-index: -1;
+    background-repeat: repeat-x;
+}
+.headerimage_blue{
+    background-image: url('images/gradientblue.jpg');
+    height: 245px;
+    overflow: hidden;
+    margin-top: 0px;
+    z-index: -1;
+
+    background-repeat: repeat-x;
+}
+.headerimage_green{
+    background-image: url('images/gradientgreen.jpg');
+    height: 245px;
+    overflow: hidden;
+    margin-top: 0px;
+    z-index: -1;
+    background-repeat: repeat-x;
+}
+
+headerimage_none_color{
+    height: 245px;
+    overflow: hidden;
+    margin-top: 0px;
+    z-index: -1;
+    background-repeat: repeat-x;
+
+}
+.green  h1{
+    color: green;
+}
+.blue  h1{
+    color: #3F8DE6;
+}
+.red  h1{
+    color: #CA361A;
+}
+.none_color  h1{
+    color: black;
+}
+#container{
+    position: absolute;
+    z-index: 1;
+    top: 0;
 }
