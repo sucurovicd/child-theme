@@ -22,22 +22,28 @@ if( !defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 <?php //get_responsive_breadcrumb_lists();?>
-    <div id="content" class="grid col-940">
-        <div id="breadcrumb">
-            <?php woocommerce_breadcrumb(); ?>
-        </div>
     <?php if (!is_product()):?>
-    <div id="content" class="grid col-700 right">
-        <?php woocommerce_content(); ?>     
-    </div>
-    <div class="grid col-220 fit left-sidebar">
-        <div id="shop-left-sidebar-categories">
-            <?php dynamic_sidebar('shopleftsidebar') ?>
-        </div>
-    </div>
+        <div class="grid col-940">
+            <div id="breadcrumb">
+                <?php woocommerce_breadcrumb(); ?>
+            </div>
 
-    <?php else: ?>
+            <div class="grid col-620 right">
         <?php woocommerce_content(); ?>     
+            </div>
+            <div class="grid col-300 fit left-sidebar">
+                <div id="shop-left-sidebar-categories">
+                    <?php dynamic_sidebar('shopleftsidebar') ?>
+                </div>
+            </div>
+    <?php else: ?>
+        <div class="grid col-940">
+            <div id="content">
+                <div id="breadcrumb">
+                    <?php woocommerce_breadcrumb(); ?>
+                </div>
+            <?php woocommerce_content(); ?>     
+            </div>
     <?php endif; ?>
     </div>
 <?php get_footer(); ?>
