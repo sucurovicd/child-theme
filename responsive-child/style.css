@@ -268,6 +268,9 @@ body {
   padding: 0;
   margin-left:10px;
 }
+#breadcrumb > nav{
+    margin-bottom: 0;
+}
 /*
 ******************FOOTER************
 */
@@ -514,4 +517,23 @@ headerimage_none_color {
 
 #content-full{
     margin-top: 0;
+}
+
+/*
+********Register/Login Widget
+*/
+
+#top-widget{}
+#top-widget .widget-title{
+    display:none;
+}
+
+#top-widget a{
+    color:white;
+}
+#top-widget .home-page{
+    color:black;
+}
+#top-widget a:hover{
+    text-decoration:underline;
 }

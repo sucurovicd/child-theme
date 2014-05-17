@@ -22,7 +22,7 @@ Template Name:  Sidebar/Content
  */
 ?>
 <?php get_header(); ?>
-
+<?php get_responsive_breadcrumb_lists();?>
 <div id="content" class="grid-right col-620 fit">
 
 	<?php if( have_posts() ) : ?>

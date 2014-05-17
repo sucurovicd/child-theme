@@ -20,8 +20,6 @@ if( !defined( 'ABSPATH' ) ) {
  * @since          available since Release 1.0
  */
 ?>
-<?php get_responsive_breadcrumb_lists();
-?>
 <?php responsive_widgets_before(); // above widgets container hook ?>
 
         <div class="col-300 fit">
