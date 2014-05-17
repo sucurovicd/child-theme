@@ -27,7 +27,6 @@ get_header(); ?>
             <div id="breadcrumb">
                 <?php woocommerce_breadcrumb(); ?>
             </div>
-
             <div class="grid col-620 right">
         <?php woocommerce_content(); ?>     
             </div>

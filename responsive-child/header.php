@@ -111,3 +111,4 @@ if( !defined( 'ABSPATH' ) ) {
 <?php responsive_wrapper_top(); // before wrapper content hook ?>
 <?php responsive_in_wrapper(); // wrapper hook ?>
 <?php nav_bar($post->ID); ?>
+
