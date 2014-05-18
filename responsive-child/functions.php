@@ -64,7 +64,7 @@ function nav_bar($page_id){
         ?> <div class="row" id="sub-nav">
             <div class="second-menu">
                 <button type="button" id="second-menu-toggle" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> </button>
-                <ul id="collapsable">
+                
                 <?php
                 if( has_nav_menu( 'sub-header-menu', 'responsive' ) ) { ?>
 			<?php wp_nav_menu( array(
@@ -74,7 +74,7 @@ function nav_bar($page_id){
 		));
 		}
                 ?>
-                </ul>
+               
             </div>
         </div>
     <?php

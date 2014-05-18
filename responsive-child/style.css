@@ -1,6 +1,8 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 @import url("../responsive/style.css");
+/* =Theme customization starts here
+-------------------------------------------------------------- */
 /*
  Theme Name:   Responsive Child
  Theme URI:    http://example.com/twenty-fourteen-child/
@@ -143,11 +145,11 @@ body {
 #wrapper p {
   font-size: 14px;
 }
-#content, .post-entry {
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 0;
-    
+#content,
+.post-entry {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 0;
 }
 /*
 ***********WIDGETS***********
@@ -158,7 +160,7 @@ body {
   padding: 0px;
 }
 #events-sidebar {
-  margin-top: 80px;
+  margin-top: 35px;
 }
 #events-sidebar .widgettitle {
   background-color: #ECECEC;
@@ -182,8 +184,8 @@ body {
 ***********SECOND MENU********
 */
 #sub-nav {
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
   position: relative;
   clear: both;
   overflow: hidden;
@@ -194,6 +196,10 @@ body {
   padding: 0 4px;
   border-radius: 2px;
 }
+#sub-nav .second-menu .sub-header-menu a {
+  line-height: 28px;
+  font-weight: bold;
+}
 #sub-nav .second-menu #second-menu-toggle {
   display: none;
 }
@@ -203,6 +209,7 @@ body {
   height: 28px;
   padding: 0 15px;
   text-decoration: none;
+  font-weight: bold;
 }
 #sub-nav .second-menu a:hover {
   background-color: #FBFBFB;
@@ -228,8 +235,8 @@ body {
   border-right: 1px solid #A3A3A3;
   border-left: 1px solid #FFFFFF;
   float: left;
-  font-size: 12px;
-  font-weight: bolder;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
   line-height: 28px;
   list-style: none;
   margin: 0px;
@@ -266,10 +273,10 @@ body {
 }
 #breadcrumb {
   padding: 0;
-  margin-left:10px;
+  margin-left: 10px;
 }
-#breadcrumb > nav{
-    margin-bottom: 0;
+#breadcrumb > nav {
+  margin-bottom: 0;
 }
 /*
 ******************FOOTER************
@@ -387,7 +394,7 @@ small {
 .woocommerce-page #respond input#submit.alt,
 .woocommerce-page a.button.alt,
 .woocommerce-page button.button.alt,
-.woocommerce-page input.button.alt{
+.woocommerce-page input.button.alt {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.22, #bc8989), color-stop(1, #b10303));
   background-image: -o-linear-gradient(bottom, #bc8989 22%, #b10303 100%);
   background-image: -moz-linear-gradient(bottom, #bc8989 22%, #b10303 100%);
@@ -484,56 +491,83 @@ headerimage_none_color {
   left: 0;
   right: 0;
 }
-
 .second-menu .current-menu-item a,
 .current-product_cat-ancestor > a,
 .current-menu-ancestor > a,
 .current-menu-parent > a,
-.current-product_cat-parent >a
-{
-    background-color: #FBFBFB;
-    background-image: linear-gradient(to bottom, #9a9a9a 0%, #fbfbfb 100%);
+.current-product_cat-parent > a {
+  background-color: #FBFBFB;
+  background-image: linear-gradient(to bottom, #9a9a9a 0%, #fbfbfb 100%);
 }
-
 /*
 *******Korpa******
 */
-
-.shop_table .product-remove{
-    width: 10%;
+.shop_table .product-remove {
+  width: 10%;
 }
-.shop_table .product-name{
-    width:30%;
+.shop_table .product-name {
+  width: 30%;
 }
-
-.woocommerce-page td.product-name dl.variation dd{
-    margin-bottom: 0;
+.woocommerce-page td.product-name dl.variation dd {
+  margin-bottom: 0;
 }
-
-.woocommerce dd p{
-    color: red;
-    margin: 0;
+.woocommerce dd p {
+  color: red;
+  margin: 0;
 }
-
-#content-full{
-    margin-top: 0;
+#content-full {
+  margin-top: 0;
 }
-
 /*
 ********Register/Login Widget
 */
-
-#top-widget{}
-#top-widget .widget-title{
-    display:none;
+#top-widget .widget-title {
+  display: none;
+}
+#top-widget a {
+  color: white;
+}
+#top-widget .home-page {
+  color: black;
+}
+#top-widget a:hover {
+  text-decoration: underline;
+}
+/*
+*************SEARCH WIDGET**********
+*/
+.widget_search input[type=submit] {
+  background: #5EA939;
+  background-clip: padding-box;
+  border: none;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 -3px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -3px 10px rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  font-size: 10px;
+  height: 24px;
+  line-height: 10px;
+  font-weight: normal;
+  width: 56px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  max-width: 56px;
+}
+.widget_search input[type=text] {
+  background: #fff;
+  border: 2px inset #eee;
+  color: #494949;
+  display: inline-block;
+  font: 13px/100% Verdana, sans-serif;
+  height: 22px;
+  margin: 1px 2px 0 0;
+  max-width: 180px;
+  padding: 1px;
+  width: 180px;
+}
+.cart-tab {
+  width: 19em;
 }
 
-#top-widget a{
-    color:white;
-}
-#top-widget .home-page{
-    color:black;
-}
-#top-widget a:hover{
-    text-decoration:underline;
-}
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

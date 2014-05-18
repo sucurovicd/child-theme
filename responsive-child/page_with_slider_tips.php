@@ -8,7 +8,7 @@ if( !defined( 'ABSPATH' ) ) {
 /**
  * Full Content Template
  *
-Template Name:  Slider_page
+Template Name:  Slider_page_tips
  *
  * @file           page-width-slider.php
 
@@ -17,7 +17,7 @@ Template Name:  Slider_page
 get_header(); ?>
 
 <?php
-echo do_shortcode("[metaslider id=278]");
+echo do_shortcode("[metaslider id=39]");
 ?>
 
     <div id="content" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
@@ -65,6 +65,6 @@ echo do_shortcode("[metaslider id=278]");
         ?>
 
     </div><!-- end of #content -->
+<div id="events-sidebar" class="grid col-220 fit"><?php dynamic_sidebar("tips-sidebar"); ?></div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
