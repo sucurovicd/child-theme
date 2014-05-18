@@ -3,6 +3,8 @@
 @import url("../responsive/style.css");
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+/* =Theme customization starts here
+-------------------------------------------------------------- */
 /*
  Theme Name:   Responsive Child
  Theme URI:    http://example.com/twenty-fourteen-child/
@@ -39,7 +41,8 @@ body {
   float: right !important;
 }
 .menu .current_page_item a,
-.menu .current-menu-item a {
+.menu .current-menu-item a,
+.main-nav .current-page-ancestor a {
   background-color: white;
   -webkit-border-top-left-radius: 5px;
   -webkit-border-top-right-radius: 5px;
@@ -58,12 +61,14 @@ body {
   text-shadow: none;
 }
 .menu .current_page_item,
-.menu .current-menu-item {
+.menu .current-menu-item,
+.main-nav .current-page-ancestor {
   background-color: #ffffff;
   z-index: 101;
 }
 .menu .current_page_item:hover,
-.menu .current-menu-item:hover {
+.menu .current-menu-item:hover,
+.main-nav .current-page-ancestor:hover {
   z-index: 101;
 }
 .main-nav ul li a {
@@ -99,7 +104,8 @@ body {
   z-index: 0;
 }
 .menu .current_page_item a:hover,
-.menu .current-menu-item a:hover {
+.menu .current-menu-item a:hover,
+.main-nav .current-page-ancestor a:hover {
   color: #000000;
   background-image: none;
   background-color: #ffffff;
@@ -160,7 +166,7 @@ body {
   padding: 0px;
 }
 #events-sidebar {
-  margin-top: 35px;
+  margin-top: 14px;
 }
 #events-sidebar .widgettitle {
   background-color: #ECECEC;
@@ -251,6 +257,7 @@ body {
   font-weight: bold;
   font-size: 1.2em;
   margin-left: 1em;
+  margin-bottom: 25px;
 }
 .side_menu .page_item a {
   color: #666;
@@ -569,5 +576,39 @@ headerimage_none_color {
 .cart-tab {
   width: 19em;
 }
+/*
+***************WIDGETS TOP***************
+*/
+.execphpwidget {
+  padding-right: 35%;
+}
+/*
+*****************LOGIN AND REGISTER************
+*/
+.woocommerce h2 {
+  font-size: 1.6em;
+}
+.woocommerce form input[type=submit] {
+  background: none repeat scroll 0 0 padding-box #5ea939;
+  border: medium none;
+  border-radius: 20px;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5) inset;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 0.3em 1.6em;
+  font-weight: normal;
+}
+.woocommerce form input[type=submit]:hover {
+  background: none repeat scroll 0 0 padding-box #5ea939;
+  border: medium none;
+  border-radius: 20px;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5) inset;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 0.3em 1.6em;
+}
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
 
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
