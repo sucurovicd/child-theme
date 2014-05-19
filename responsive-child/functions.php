@@ -161,6 +161,18 @@ function side_nav_menu($page_id){
 	    );
 	
 	    register_sidebar( $args );
+        $args2 = array(
+            'name'          => __( 'Tips sidebar', 'theme_text_domain' ),
+            'id'            => 'tips-sidebar',
+            'description'   => '',
+            'class'         => '',
+            'before_widget' => '<div class="tips">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="widgettitle">',
+            'after_title'   => '</h2>'
+        );
+    
+        register_sidebar( $args2 );
 
 //Menja style u zavisnosti od trenutne stranice
 function style($page_id){
