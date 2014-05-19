@@ -96,6 +96,20 @@ $responsive_options = responsive_get_options();
 	$('.second-menu li').hover(function(){
 		$(this).find('ul').fadeToggle(400);
 	});
+        //ovde ispod ubacuj document ready
+            // Binding to trigger checkPasswordStrength
+    $( 'body' ).on( 'keyup', 'input[name=password1], input[name=password2]',
+        function( event ) {
+            checkPasswordStrength(
+                $('input[name=password]'),         // First password field
+                $('input[name=password_retyped]'), // Second password field
+                $('#password-strength'),           // Strength meter
+                $('input[type=submit]'),           // Submit button
+                ['black', 'listed', 'word']        // Blacklisted words
+            );
+        }
+    );
+
 });
 </script>
 </body>

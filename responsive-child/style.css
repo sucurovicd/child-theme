@@ -248,6 +248,7 @@ body {
   background-image: none;
   background-color: transparent;
 }
+
 #sub-nav .second-menu .sub-header-menu a {
   line-height: 28px;
   font-weight: bold;
@@ -265,6 +266,7 @@ body {
   border-right: 1px solid #A3A3A3;
   border-left: 1px solid #FFFFFF;
   width: auto;
+
 }
 #sub-nav .second-menu a:hover {
   background-color: #FBFBFB;
@@ -633,7 +635,8 @@ headerimage_none_color {
 .woocommerce h2 {
   font-size: 1.6em;
 }
-.woocommerce form input[type=submit] {
+.woocommerce form input[type=submit],
+.register-page .reg_button{
   background: none repeat scroll 0 0 padding-box #5ea939;
   border: medium none;
   border-radius: 20px;
@@ -644,8 +647,9 @@ headerimage_none_color {
   padding: 0.3em 1.6em;
   font-weight: normal;
 }
-.woocommerce form input[type=submit]:hover {
-  background: none repeat scroll 0 0 padding-box #5ea939;
+.woocommerce form input[type=submit]:hover,
+.register-page .reg_button:hover{
+  background: none repeat scroll 0 0 padding-box green;
   border: medium none;
   border-radius: 20px;
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5) inset;
@@ -653,7 +657,29 @@ headerimage_none_color {
   display: inline-block;
   margin-bottom: 1em;
   padding: 0.3em 1.6em;
+  font-weight: normal;
 }
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
 
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+.register label {
+    width: 150px;
+}
+
+.register .input-text{
+    width: 180px;
+}
+.register_ul{
+    padding-top: 3.5em;
+    text-align: center;
+}
+.register_ul p{
+    font-weight: bold;
+}
+.register_ul > ul {
+    list-style-type: none;
+}
+
+.register-page fieldset{
+    margin: 10px;
+}
