@@ -306,12 +306,15 @@ body {
   margin-left: 1em;
   margin-bottom: 25px;
 }
+.side_menu ul {
+    list-style-type:none;
+    background-color: #fafafa;
+}
 .side_menu .page_item a {
   color: #666;
   border-bottom: 1px dotted black;
   line-height: 30px;
   padding: 5px;
-  background-color: #fafafa;
   font-size: 0.7em;
 }
 .side_menu .page_item a:hover {
@@ -320,7 +323,7 @@ body {
   background-color: #f7eedb;
 }
 .side_menu .page_item ul {
-  padding: 0 0 0 20px;
+  padding: 0 0 0 15px;
 }
 .breadcrumb-list {
   margin: 0 0 10px 10px;
@@ -636,6 +639,7 @@ headerimage_none_color {
   font-size: 1.6em;
 }
 .woocommerce form input[type=submit],
+.woocommerce .reg_button,
 .register-page .reg_button{
   background: none repeat scroll 0 0 padding-box #5ea939;
   border: medium none;
@@ -648,6 +652,7 @@ headerimage_none_color {
   font-weight: normal;
 }
 .woocommerce form input[type=submit]:hover,
+.woocommerce .reg_button:hover,
 .register-page .reg_button:hover{
   background: none repeat scroll 0 0 padding-box green;
   border: medium none;

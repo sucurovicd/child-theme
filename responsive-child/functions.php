@@ -1,10 +1,17 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+if( !defined( 'ABSPATH' ) ) {
+	exit;
+}
+/**
+ * Functions
+ *
+ *
+ * @file           function.php
+ * @package        Responsive-Child
+ * @author         CodeCrewDev
  */
+
 require('include/top-widget.php');
 //Sklanjanje komentara
 add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
@@ -207,50 +214,6 @@ add_filter( 'theme_page_templates', 'my_remove_page_template' );
 }
 
 
-function adding_custom_registration_fields( ) {
-
-	//lets make the field required so that i can show you how to validate it later;
-	$firstname = empty( $_POST['firstname'] ) ? '' : $_POST['firstname'];
-	$lastname  = empty( $_POST['lastname'] ) ? '' : $_POST['lastname'];
-	$address = empty( $_POST['address'] ) ? '' : $_POST['address'];
-	$city = empty( $_POST['city'] ) ? '' : $_POST['city'];
-	$state = empty( $_POST['state'] ) ? '' : $_POST['state'];
-	$zip = empty( $_POST['zip'] ) ? '' : $_POST['zip'];
-	$phone = empty( $_POST['phone'] ) ? '' : $_POST['phone'];
-        
-	?>
-	<p class="form-row form-row-wide">
-		<label for="reg_firstname"><?php _e( 'First Name', 'woocommerce' ) ?><span class="required">*</span></label>
-		<input type="text" class="input-text" name="firstname" id="reg_firstname" size="30" value="<?php echo esc_attr( $firstname ) ?>" />
-	</p>	<p class="form-row form-row-wide">
-
-	<p class="form-row form-row-wide">
-		<label for="reg_lastname"><?php _e( 'Last Name', 'woocommerce' ) ?><span class="required">*</span></label>
-		<input type="text" class="input-text" name="lastname" id="reg_lastname" size="30" value="<?php echo esc_attr( $lastname ) ?>" />
-	</p>
-	<p class="form-row form-row-wide">
-		<label for="reg_address"><?php _e( 'Adrress', 'woocommerce' ) ?><span class="required">*</span></label>
-		<input type="text" class="input-text" name="address" id="reg_adrress" size="30" value="<?php echo esc_attr( $address ) ?>" />
-	</p>
-	<p class="form-row form-row-wide">
-		<label for="reg_city"><?php _e( 'City', 'woocommerce' ) ?><span class="required">*</span></label>
-		<input type="text" class="input-text" name="city" id="reg_city" size="30" value="<?php echo esc_attr( $city ) ?>" />
-	</p>
-	<p class="form-row form-row-wide">
-		<label for="reg_state"><?php _e( 'State', 'woocommerce' ) ?><span class="required">*</span></label>
-		<input type="text" class="input-text" name="state" id="reg_state" size="30" value="<?php echo esc_attr( $state ) ?>" />
-	</p>
-	<p class="form-row form-row-wide">
-		<label for="reg_zip"><?php _e( 'ZIP', 'woocommerce' ) ?><span class="required">*</span></label>
-		<input type="text" class="input-text" name="zip" id="reg_zip" size="30" value="<?php echo esc_attr( $zip ) ?>" />
-	</p>
-	<p class="form-row form-row-wide">
-		<label for="reg_phone"><?php _e( 'Phone', 'woocommerce' ) ?><span class="required">*</span></label>
-		<input type="text" class="input-text" name="phone" id="reg_phone" size="30" value="<?php echo esc_attr( $phone ) ?>" />
-	</p>
- 
-            <?php
-}
 
 //Validation registration form  after submission using the filter registration_errors
 add_filter( 'woocommerce_registration_errors', 'registration_errors_validation' );
@@ -298,4 +261,3 @@ function register_script_child(){
     wp_enqueue_script( 'password-strength-meter' );
 }
 add_action("wp_enqueue_scripts", "register_script_child" );
-

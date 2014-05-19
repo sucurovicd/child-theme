@@ -10,14 +10,8 @@ if( !defined( 'ABSPATH' ) ) {
  *
  *
  * @file           header.php
- * @package        Responsive
- * @author         Emil Uzelac
- * @copyright      2003 - 2014 CyberChimps
- * @license        license.txt
- * @version        Release: 1.3
- * @filesource     wp-content/themes/responsive/header.php
- * @link           http://codex.wordpress.org/Theme_Development#Document_Head_.28header.php.29
- * @since          available since Release 1.0
+ * @package        Responsive-Child
+ * @author         CodeCrewDev
  */
 ?>
 	<!doctype html>
@@ -147,7 +141,7 @@ if( !defined( 'ABSPATH' ) ) {
 		<?php get_sidebar( 'top' ); ?>
 		<?php wp_nav_menu( array(
 							   'container'       => 'div',
-							   'container_class' => 'main-nav',
+							   'container_class' => "main-nav",
 							   'fallback_cb'     => 'responsive_fallback_menu',
 							   'theme_location'  => 'header-menu'
 						   )
