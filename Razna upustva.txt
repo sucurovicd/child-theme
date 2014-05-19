@@ -1,15 +1,3 @@
 -U stranice sa sliderom, kada se ubaci prvi slider,uneti ID slajdera. 
 Linija koda izgleda:
 echo do_shortcode("[metaslider id=39]");
-
--Ubaciti PHP code widget u Top Widget i ubaciti ovaj kod:
-<?php 
-global $user_identity;
-$home_class = (is_front_page())? "home-page":"";
-if ( is_user_logged_in() ) { ?>
- 	<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" class="<?php echo $home_class?>" title="<?php _e('My Account','woothemes'); ?>"><?php _e('My Account','woothemes'); ?></a> | <a href="<?php echo wp_logout_url( home_url() ) ?>" class="<?php echo $home_class?>" title="Logout">Logout (<?php echo($user_identity);?>)</a>
- <?php }
- else { ?>
- 	<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" class="<?php echo $home_class?>" title="<?php _e('Login / Register','woothemes'); ?>"><?php _e('Login / Register','woothemes'); ?></a>
- <?php }
-?>
