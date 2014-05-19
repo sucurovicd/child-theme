@@ -91,5 +91,12 @@ $responsive_options = responsive_get_options();
 <?php responsive_container_end(); // after container hook ?>
 
 <?php wp_footer(); ?>
+		<script type="text/javascript">
+	$(document).ready(function(){
+	$('.second-menu li').hover(function(){
+		$(this).find('ul').fadeToggle(400);
+	});
+});
+</script>
 </body>
 </html>

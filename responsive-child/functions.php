@@ -180,3 +180,11 @@ function style($page_id){
         return 'red';
     }
 }
+/*
+*****************REGISTER JQUERY***********
+*/
+function register_script_child(){
+    wp_register_script( "jquery_child", get_stylesheet_directory_uri()."/js/jquery-1.11.1.min.js", null, true );
+    wp_enqueue_script("jquery_child" );
+}
+add_action("wp_enqueue_scripts", "register_script_child" );
