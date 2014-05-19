@@ -168,7 +168,8 @@ function side_nav_menu($page_id){
 	    );
 	
 	    register_sidebar( $args );
-        $args2 = array(
+            
+            $args2 = array(
             'name'          => __( 'Tips sidebar', 'theme_text_domain' ),
             'id'            => 'tips-sidebar',
             'description'   => '',
@@ -261,3 +262,4 @@ function register_script_child(){
     wp_enqueue_script( 'password-strength-meter' );
 }
 add_action("wp_enqueue_scripts", "register_script_child" );
+
