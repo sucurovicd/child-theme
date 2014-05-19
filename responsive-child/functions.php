@@ -83,12 +83,13 @@ function nav_bar($page_id){
         //Nakon toga decu iliti meni koji cemo i ispisati
         $nav_meni = get_children($root);
         $svi_roditelji = get_post_ancestors($page_id); 
-        $klasa_trenutna = "class=current-menu-item";
+        $klasa_trenutna;
         if (!empty($nav_meni)){
         //Provlacimo kroz for each petlju i ako nema postavljen Order,stavljamo mu ID kao isti. Dodeljujemo li i a tagove zbog linka
             foreach ($nav_meni as $nav){
                 //Proveravamo da li je izabran trenutni podmeni
-                if ($nav->ID == $page_id || in_array($nav->ID, $svi_roditelji)){
+                if ($nav->ID == $page_id || in_array($nav->ID, $svi_roditelji))
+                    $klasa_trenutna = "class=current-menu-item";   
                     //Ako vrednost nije postavljena iliti jednaka je 0, kao vrednost stavljamo ID
                     if ($nav->menu_order == 0)
                        $write[$nav->ID] = "<li $klasa_trenutna><a href='" . home_url() ."/". $root_title ."/". url_prepare($nav->post_title) . "'>" . $nav->post_title . "</a></li>";
@@ -98,18 +99,7 @@ function nav_bar($page_id){
                     //U suprotnom, dodajemo joj samo vrednost iz Page ordera i tako i sortiramo
                     else 
                         $write[$nav->menu_order] = "<li $klasa_trenutna><a href='" . home_url() ."/". $root_title ."/". url_prepare($nav->post_title) . "'>" . $nav->post_title . "</a></li>";
-                } 
-                else{
-                    //Ako vrednost nije postavljena iliti jednaka je 0, kao vrednost stavljamo ID
-                    if ($nav->menu_order == 0)
-                       $write[$nav->ID] = "<li><a href='" . home_url() ."/". $root_title ."/". url_prepare($nav->post_title) . "'>" . $nav->post_title . "</a></li>";
-                    //Ako je postavljena i ako postoji vec ta vrednost, dodajemo joj vrednost ID-a u decimali
-                    elseif (isset($write[$nav->menu_order]))
-                        $write[$nav->menu_order."+0.".$nav->ID] = "<li><a href='" . home_url() ."/". $root_title ."/". url_prepare($nav->post_title) . "'>" . $nav->post_title . "</a></li>";
-                    //U suprotnom, dodajemo joj samo vrednost iz Page ordera i tako i sortiramo
-                    else 
-                        $write[$nav->menu_order] = "<li><a href='" . home_url() ."/". $root_title ."/". url_prepare($nav->post_title) . "'>" . $nav->post_title . "</a></li>";
-                }
+                    $klasa_trenutna = "";
             }
             //Sortiramo od manjeg ka vecem i ispisujemo tako
             ksort ($write);
