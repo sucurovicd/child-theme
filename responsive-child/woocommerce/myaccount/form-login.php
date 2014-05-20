@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<p class="form-row">
             <?php wp_nonce_field( 'woocommerce-login' ); ?>
             <?php if( function_exists( 'cptch_display_captcha_custom' ) ) { echo "<input type='hidden' name='cntctfrm_contact_action' value='true' />"; echo cptch_display_captcha_custom(); } ?><br><br>
-            <input type="hidden" name="redirect" value="<?php echo $_SERVER["HTTP_REFERER"]; ?>" />
+            <input type="hidden" name="redirect" value="<?php echo htmlspecialchars($_SERVER["HTTP_REFERER"]) ?>" />
             <input type="submit" class="button" name="login" value="<?php _e( 'Login', 'woocommerce' ); ?>" /> 
             <label for="rememberme" class="inline">
             <input name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php _e( 'Remember me', 'woocommerce' ); ?>
