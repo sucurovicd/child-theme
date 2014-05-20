@@ -668,11 +668,11 @@ headerimage_none_color {
 
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
 .register label {
-    width: 150px;
+    width: 15em;
 }
 
 .register .input-text{
-    width: 180px;
+    width: 15em;
 }
 .register_ul{
     padding-top: 3.5em;
