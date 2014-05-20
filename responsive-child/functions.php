@@ -166,7 +166,7 @@ function side_nav_menu($page_id){
             'id'            => 'tips-sidebar',
             'description'   => '',
             'class'         => '',
-            'before_widget' => '<div class="tips">',
+            'before_widget' => '<div class="event">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2 class="widgettitle">',
             'after_title'   => '</h2>'
