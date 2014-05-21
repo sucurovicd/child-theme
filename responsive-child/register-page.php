@@ -4,6 +4,13 @@
 if( !defined( 'ABSPATH' ) ) {
 	exit;
 }
+//Ako je korisnik registrovan i proba da udje na register stranicu,prosledjuje se na myaccount
+$myaccount_page_id = get_option( 'woocommerce_myaccount_page_id' );
+if ( is_user_logged_in() ){
+    wp_redirect( get_permalink( $myaccount_page_id ), $status );
+    exit;
+ }
+
 
 /**
  * register-page

@@ -35,7 +35,7 @@ class login_widget extends WP_Widget {
         global $user_identity;
         global $woocommerce;
         $home_class = (is_front_page())? "home-page":""; ?>
-        <a href="<?php echo $woocommerce->cart->get_cart_url();?>" class="<?php echo $home_class; ?>" title="<?php _e("Cart",'woothemes');?>"><?php _e("Cart",'woothemes')?></a> | 
+        <a href="<?php echo $woocommerce->cart->get_cart_url();?>" class="<?php echo $home_class; ?>" title="<?php _e("Cart",'woothemes');?>"><?php _e("Cart",'woothemes'); echo "(",$woocommerce->cart->cart_contents_count,")"?></a> | 
         <?php if ( is_user_logged_in() ) { ?>
         <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" class="<?php echo $home_class?>" title="<?php _e('My Account','woothemes'); ?>"><?php _e('My Account','woothemes'); ?></a>
         | <a href="<?php echo wp_logout_url( home_url() ) ?>" class="<?php echo $home_class?>" title="Logout">Logout (<?php echo($user_identity);?>)</a>
