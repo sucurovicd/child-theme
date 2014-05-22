@@ -95,7 +95,7 @@ $responsive_options = responsive_get_options();
 	$(document).ready(function(){
 		var x = $(location).attr('pathname');
 		if(x.indexOf("product") != -1){
-			$("#menu-item-22").addClass("current-page-ancestor");
+			$("#menu-item-24").addClass("current-page-ancestor");
 		}
 
 	$('.second-menu li').hover(function(){

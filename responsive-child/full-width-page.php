@@ -21,14 +21,9 @@ Template Name:  Full Width Page (no sidebar)
  * @since          available since Release 1.0
  */
 
-get_header(); 
- /* Display breadcrumb
- */
-?>
+get_header(); ?>
 <div id="content-full" class="grid col-940">
-<?php
-get_responsive_breadcrumb_lists();
- ?>
+<?php get_responsive_breadcrumb_lists(); ?>
 	<?php if( have_posts() ) : ?>
 
 		<?php while( have_posts() ) : the_post(); ?>

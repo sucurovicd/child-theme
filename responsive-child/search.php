@@ -6,25 +6,27 @@ if( !defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Index Template
+ * Search Template
  *
  *
- * @file           index.php
+ * @file           search.php
  * @package        Responsive
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.0
- * @filesource     wp-content/themes/responsive/index.php
- * @link           http://codex.wordpress.org/Theme_Development#Index_.28index.php.29
+ * @filesource     wp-content/themes/responsive/search.php
+ * @link           http://codex.wordpress.org/Theme_Development#Search_Results_.28search.php.29
  * @since          available since Release 1.0
  */
 
 get_header(); ?>
 
-<div id="content" class="grid col-620">
-
+<div id="content-search" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
 	<?php if( have_posts() ) : ?>
+                <?php get_search_form(); ?>
+
+		<?php get_template_part( 'loop-header' ); ?>
 
 		<?php while( have_posts() ) : the_post(); ?>
 
@@ -32,15 +34,10 @@ get_header(); ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php responsive_entry_top(); ?>
 
-				<?php get_template_part( 'post-meta-page' ); ?>
+				<?php get_template_part( 'post-meta' ); ?>
 
 				<div class="post-entry">
-					<?php if( has_post_thumbnail() ) : ?>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail(); ?>
-						</a>
-					<?php endif; ?>
-					<?php the_content( __( 'Read more &#8250;', 'responsive' ) ); ?>
+					<?php the_excerpt(); ?>
 					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
 				</div>
 				<!-- end of .post-entry -->
@@ -50,10 +47,6 @@ get_header(); ?>
 				<?php responsive_entry_bottom(); ?>
 			</div><!-- end of #post-<?php the_ID(); ?> -->
 			<?php responsive_entry_after(); ?>
-
-			<?php responsive_comments_before(); ?>
-			<?php comments_template( '', true ); ?>
-			<?php responsive_comments_after(); ?>
 
 		<?php
 		endwhile;
@@ -67,7 +60,6 @@ get_header(); ?>
 	endif;
 	?>
 
-</div><!-- end of #content -->
+</div><!-- end of #content-search -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
