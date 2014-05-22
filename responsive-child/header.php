@@ -22,9 +22,10 @@ if( !defined( 'ABSPATH' ) ) {
 	<!--[if IE 8 ]>
 	<html class="no-js ie8" <?php language_attributes(); ?>> <![endif]-->
 	<!--[if IE 9 ]>
-	<html class="no-js ie9" <?php language_attributes(); ?>> <![endif]-->
-	<!--[if gt IE 9]><!-->
-<html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+	<html class="no-js ie9" <?php language_attributes(); ?>>  <![endif]-->
+	
+
+<html class="no-js" <?php language_attributes(); ?>>  <!--<![endif]-->
 	<head>
 
 		<meta charset="<?php bloginfo( 'charset' ); ?>"/>
@@ -37,13 +38,24 @@ if( !defined( 'ABSPATH' ) ) {
 
 		<?php wp_head(); ?>
 				  <style type="text/css">
+		
       @-moz-document url-prefix() {
                         .main-nav ul li{
                         margin-bottom: 0px;
                     }
                     }
-  
+  	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		     .main-nav ul li{
+                        margin-bottom: 0px;
+                    }
+             #container{
+             	max-width: none;
+             	width: 960px;
+             }
+		}
+
     </style>
+       
 
 	</head>
 
