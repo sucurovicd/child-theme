@@ -22,8 +22,10 @@ if( !defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<div id="content-search" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
+<div id="content-search" class="grid col-940">
 	<?php if( have_posts() ) : ?>
+        <h1><?php _e("Results:",'woocommerce'); ?></h1>
+
                 <?php get_search_form(); ?>
 
 		<?php get_template_part( 'loop-header' ); ?>

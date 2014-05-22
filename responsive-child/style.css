@@ -11,6 +11,8 @@
 -------------------------------------------------------------- */
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+/* =Theme customization starts here
+-------------------------------------------------------------- */
 /*
  Theme Name:   Responsive Child
  Theme URI:    http://example.com/twenty-fourteen-child/
@@ -315,10 +317,9 @@ body {
   margin-left: 1em;
   margin-bottom: 25px;
 }
-
-.side_menu .pagenav ul{
-    list-style-type:none;
-    background-color: #fafafa;
+.side_menu .pagenav ul {
+  list-style-type: none;
+  background-color: #fafafa;
 }
 .side_menu .page_item a {
   color: #666;
@@ -461,7 +462,7 @@ small {
 .woocommerce-page a.button.alt,
 .woocommerce-page button.button.alt,
 .woocommerce-page input.button.alt,
-.woocommerce a.add_to_cart_button{
+.woocommerce a.add_to_cart_button {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.22, #bc8989), color-stop(1, #b10303));
   background-image: -o-linear-gradient(bottom, #bc8989 22%, #b10303 100%);
   background-image: -moz-linear-gradient(bottom, #bc8989 22%, #b10303 100%);
@@ -481,7 +482,7 @@ small {
 .woocommerce-page a.button.alt:hover,
 .woocommerce-page button.button.alt:hover,
 .woocommerce-page input.button.alt:hover,
-.woocommerce a.add_to_cart_button:hover{
+.woocommerce a.add_to_cart_button:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.22, #f078a8), color-stop(1, #ff0000));
   background-image: -o-linear-gradient(bottom, #f078a8 22%, #ff0000 100%);
   background-image: -moz-linear-gradient(bottom, #f078a8 22%, #ff0000 100%);
@@ -491,11 +492,11 @@ small {
   border-radius: 10px;
   border-color: #860000;
 }
-.woocommerce a.add_to_cart_button{
-    color:white;
-    letter-spacing: 0.1em;
-    font-weight: 500;
-   }
+.woocommerce a.add_to_cart_button {
+  color: white;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
 .woocommerce #content div.product div.images,
 .woocommerce div.product div.images,
 .woocommerce-page #content div.product div.images,
@@ -658,7 +659,7 @@ headerimage_none_color {
 .woocommerce form input[type=submit],
 .register-page .reg_button,
 .register_ul .reg_button,
-#searchsubmit{
+#searchsubmit {
   background: none repeat scroll 0 0 padding-box #5ea939;
   border: medium none;
   border-radius: 20px;
@@ -672,7 +673,7 @@ headerimage_none_color {
 .woocommerce form input[type=submit]:hover,
 .register-page .reg_button:hover,
 .register_ul .reg_button:hover,
-#searchsubmit:hover{
+#searchsubmit:hover {
   background: none repeat scroll 0 0 padding-box #008000;
   border: medium none;
   border-radius: 20px;
@@ -682,7 +683,6 @@ headerimage_none_color {
   padding: 0.3em 1.6em;
   font-weight: normal;
   letter-spacing: 0.1em;
-
 }
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
@@ -898,7 +898,8 @@ headerimage_none_color {
   width: 960px;
   left: 10%;
 }
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+.widget_search {
+  margin-top: 1em;
+}
 
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
