@@ -93,14 +93,33 @@ $responsive_options = responsive_get_options();
 <?php wp_footer(); ?>
 		<script type="text/javascript">
 	$(document).ready(function(){
+		
+
+
 		var x = $(location).attr('pathname');
 		if(x.indexOf("product") != -1){
 			$("#menu-item-24").addClass("current-page-ancestor");
 		}
 
+
+	var resp = $('.main-nav ul li').css('float');
+		
+	if(resp == "left"){
+	$('.sub-menu').hide()
+
+}
+if(resp == "right")
+{
 	$('.second-menu li').hover(function(){
-		$(this).find('ul').fadeToggle(400);
+
+		$(this).find('ul').stop().fadeToggle(400);
 	});
+}
+
+
+	
+
+
 	  $( 'body' ).on( 'keyup', 'input[name=password], input[name=password_retyped]',
         function( event ) {
             checkPasswordStrength(
