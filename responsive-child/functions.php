@@ -300,3 +300,15 @@ function register_script_child(){
 add_action("wp_enqueue_scripts", "register_script_child" );
 wp_enqueue_script( 'password-strength-meter' );
 
+//Pretraga se vrsi u zavisnosti da li korisnik hoce proizvod ili stranicu
+function SearchFilter($query) {
+    if ($query->is_search) {
+        if ($_GET['cc_search'] == 'pages')
+            $query->set('post_type', array( 'page', '-product' ));
+    
+        elseif ($_GET['cc_search'] == 'products')
+            $query->set('post_type','product');
+    return $query;
+    }
+}
+add_filter('pre_get_posts','SearchFilter');

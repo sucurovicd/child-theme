@@ -341,7 +341,7 @@ body {
 }
 #breadcrumb {
   padding: 0;
-  margin-left: 10px;
+  margin-left: 1em;
 }
 #breadcrumb > nav {
   margin-bottom: 0;
@@ -462,7 +462,8 @@ small {
 .woocommerce-page a.button.alt,
 .woocommerce-page button.button.alt,
 .woocommerce-page input.button.alt,
-.woocommerce a.add_to_cart_button {
+.woocommerce a.add_to_cart_button,
+.woocommerce a.product_type_simple {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.22, #bc8989), color-stop(1, #b10303));
   background-image: -o-linear-gradient(bottom, #bc8989 22%, #b10303 100%);
   background-image: -moz-linear-gradient(bottom, #bc8989 22%, #b10303 100%);
@@ -482,7 +483,8 @@ small {
 .woocommerce-page a.button.alt:hover,
 .woocommerce-page button.button.alt:hover,
 .woocommerce-page input.button.alt:hover,
-.woocommerce a.add_to_cart_button:hover {
+.woocommerce a.add_to_cart_button:hover,
+.woocommerce a.product_type_simple:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.22, #f078a8), color-stop(1, #ff0000));
   background-image: -o-linear-gradient(bottom, #f078a8 22%, #ff0000 100%);
   background-image: -moz-linear-gradient(bottom, #f078a8 22%, #ff0000 100%);
@@ -492,7 +494,8 @@ small {
   border-radius: 10px;
   border-color: #860000;
 }
-.woocommerce a.add_to_cart_button {
+.woocommerce a.add_to_cart_button,
+.woocommerce a.product_type_simple {
   color: white;
   letter-spacing: 0.1em;
   font-weight: 500;
@@ -508,6 +511,7 @@ small {
 .woocommerce-page #content div.product div.summary,
 .woocommerce-page div.product div.summary {
   width: 60%;
+  margin-top: 1em;
 }
 .variations_form > table {
   width: 70%;
@@ -592,6 +596,16 @@ headerimage_none_color {
 }
 #content-full {
   margin-top: 0;
+}
+#content-full h2,
+#content-full h3,
+#content-full h4,
+#content-full h5,
+#content-full h6,
+#content-full p,
+#content-full input[type=text] {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 /*
 ********Register/Login Widget

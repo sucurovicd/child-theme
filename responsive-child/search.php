@@ -21,7 +21,6 @@ if( !defined( 'ABSPATH' ) ) {
  */
 
 get_header(); ?>
-
 <div id="content-search" class="grid col-940">
 	<?php if( have_posts() ) : ?>
         <h1><?php _e("Results:",'woocommerce'); ?></h1>
@@ -39,7 +38,13 @@ get_header(); ?>
 				<?php get_template_part( 'post-meta' ); ?>
 
 				<div class="post-entry">
-					<?php the_excerpt(); ?>
+					<?php 
+                                            if ($_GET['cc_search'] == 'products'){
+                                                $content_sub = get_the_content(); 
+                                                echo substr($content_sub,0,200) . "...";
+                                            }
+                                            else 
+                                                 the_excerpt() ?>
 					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
 				</div>
 				<!-- end of .post-entry -->
@@ -54,13 +59,14 @@ get_header(); ?>
 		endwhile;
 
 		get_template_part( 'loop-nav' );
-
+                
 	else :
 
 		get_template_part( 'loop-no-posts' );
 
 	endif;
 	?>
+        
 
 </div><!-- end of #content-search -->
 
