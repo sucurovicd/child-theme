@@ -23,17 +23,17 @@ if( !defined( 'ABSPATH' ) ) {
 <?php get_header(); ?>
 
 <div id="content-full" class="grid col-940">
-
 	<?php responsive_entry_before(); ?>
 	<div id="post-0" class="error404">
 		<?php responsive_entry_top(); ?>
 		<?php get_template_part( 'loop-no-posts' ); ?>
 		<!-- <div class="post-entry"> </div> -->
 		<?php responsive_entry_bottom(); ?>
+
 	</div>
 	<!-- end of #post-0 -->
 	<?php responsive_entry_after(); ?>
-
+      
 </div><!-- end of #content-full -->
 
 <?php get_footer(); ?>

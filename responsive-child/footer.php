@@ -36,8 +36,11 @@ $responsive_options = responsive_get_options();
 		<?php get_sidebar( 'footer' ); ?>
 
 		<div class="grid col-940">
-
-			<div class="grid col-540">
+                    <div id="cc_subscribe" class="grid col-300">
+                        <a href="<?php echo home_url()?>/my-account"><img src="<?php echo dirname(get_bloginfo('stylesheet_url'))?>/images/footer_new.png"><p>Sign up for our newsletter</p></a>
+                    </div>
+                    
+			<div class="grid col-380 cc_footer_menu">
 				<?php if( has_nav_menu( 'footer-menu', 'responsive' ) ) { ?>
 					<?php wp_nav_menu( array(
 										   'container'      => '',
@@ -51,32 +54,16 @@ $responsive_options = responsive_get_options();
 			</div>
 			<!-- end of col-540 -->
 
-			<div class="grid col-380 fit">
-				<?php echo responsive_get_social_icons() ?>
+			<div class="grid col-220 fit">
+				<?php //echo responsive_get_social_icons() ?>
 			</div>
 			<!-- end of col-380 fit -->
 
 		</div>
 		<!-- end of col-940 -->
-		<?php get_sidebar( 'colophon' ); ?>
-
-		<div class="grid col-300 copyright">
-			<?php esc_attr_e( '&copy;', 'responsive' ); ?> <?php echo date( 'Y' ); ?><a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-				<?php bloginfo( 'name' ); ?>
-			</a>
-		</div>
-		<!-- end of .copyright -->
-
-		<div class="grid col-300 scroll-top"><a href="#scroll-top" title="<?php esc_attr_e( 'scroll to top', 'responsive' ); ?>"><?php _e( '&uarr;', 'responsive' ); ?></a></div>
-
-		<div class="grid col-300 fit powered">
-			<a href="<?php echo esc_url( 'http://cyberchimps.com/responsive-theme/' ); ?>" title="<?php esc_attr_e( 'Responsive Theme', 'responsive' ); ?>">
-				Responsive Theme</a>
-			<?php esc_attr_e( 'powered by', 'responsive' ); ?> <a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" title="<?php esc_attr_e( 'WordPress', 'responsive' ); ?>">
-				WordPress</a>
-		</div>
-		<!-- end .powered -->
-
+                <div id="cc_signature" class="grid col-940">
+                    <a href="http://www.codecrewdev.com">Design By: CodeCrewDev</a>
+                </div>
 	</div>
 	<!-- end #footer-wrapper -->
 
