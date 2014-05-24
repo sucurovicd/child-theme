@@ -217,6 +217,12 @@ body {
   background-color: #ffffff;
   z-index: 100;
 }
+@media screen and (max-width: 650px) {
+  .front-page #wrapper {
+    margin: 0px auto 20px auto;
+    border-radius: 0px;
+  }
+}
 /*
 ************CONTENT*********
 */
