@@ -62,7 +62,7 @@ $responsive_options = responsive_get_options();
 		</div>
 		<!-- end of col-940 -->
                 <div id="cc_signature" class="grid col-940">
-                    <a href="http://www.codecrewdev.com">Design By: CodeCrewDev</a>
+                    <a href="http://www.codecrewdev.com" target="_blank">Design By: CodeCrewDev</a>
                 </div>
 	</div>
 	<!-- end #footer-wrapper -->
@@ -102,8 +102,11 @@ if(resp == "right")
 		$(this).find('ul').stop().fadeToggle(400);
 	});
 }
-
-
+	
+	
+	$("#second-menu-toggle").click(function(){
+		$(".second-menu ul").fadeToggle(500);
+	});
 	
 
 

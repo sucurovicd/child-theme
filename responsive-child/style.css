@@ -13,6 +13,8 @@
 -------------------------------------------------------------- */
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+/* =Theme customization starts here
+-------------------------------------------------------------- */
 /*
  Theme Name:   Responsive Child
  Theme URI:    http://example.com/twenty-fourteen-child/
@@ -32,7 +34,7 @@ body {
 /*
 **********NAVIGACIJA HEADER**********
 */
-@media only screen and (max-device-width : 650px) {
+@media screen and (max-width: 650px) {
   .main-nav {
     background-color: #585858;
     background-image: -moz-linear-gradient(center top, #585858, #3d3d3d);
@@ -57,7 +59,7 @@ body {
   font-size: 16px;
   float: right !important;
 }
-@media only screen and (max-device-width : 650px) {
+@media screen and (max-width: 650px) {
   .main-nav ul li {
     -webkit-border-top-left-radius: 0px;
     -webkit-border-top-right-radius: 0px;
@@ -68,7 +70,7 @@ body {
     box-shadow: none !important;
     float: left !important;
     display: block;
-    width: 100%;
+    width: 100% !important;
     margin: 0;
     padding: 0;
     position: relative;
@@ -101,7 +103,7 @@ body {
   background-color: #ffffff;
   z-index: 101;
 }
-@media only screen and (max-device-width : 650px) {
+@media screen and (max-width: 650px) {
   .menu .current_page_item,
   .menu .current-menu-item,
   .main-nav .current-page-ancestor {
@@ -120,7 +122,7 @@ body {
   line-height: 36px;
   text-shadow: none;
 }
-@media only screen and (max-device-width : 650px) {
+@media screen and (max-width: 650px) {
   .main-nav ul li a {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
@@ -150,7 +152,7 @@ body {
   background-image: none;
   margin-right: 25px;
 }
-@media only screen and (max-device-width : 650px) {
+@media screen and (max-width: 650px) {
   .main-nav ul {
     position: relative;
     background-color: #585858;
@@ -198,7 +200,7 @@ body {
   padding-right: 0px;
   padding-bottom: 0px;
 }
-@media only screen and (max-device-width : 650px) {
+@media screen and (max-width: 650px) {
   #wrapper {
     margin: 0px auto 20px auto;
     border-radius: 0px;
@@ -308,9 +310,10 @@ body {
   background-image: none;
   background-color: transparent;
 }
-@media only screen and (max-device-width : 650px) {
-  .sub-header-menu {
-    display: block !important;
+@media screen and (max-width: 650px) {
+  .sub-header-menu,
+  #collapsable {
+    display: none;
   }
 }
 #sub-nav .second-menu .sub-header-menu ul li {
@@ -341,6 +344,11 @@ body {
 }
 #sub-nav .second-menu #second-menu-toggle {
   display: none;
+}
+@media screen and (max-width: 650px) {
+  #sub-nav .second-menu #second-menu-toggle {
+    display: block;
+  }
 }
 #sub-nav .second-menu a {
   color: #333333;
@@ -373,7 +381,7 @@ body {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-@media only screen and (max-device-width : 650px) {
+@media screen and (max-width: 650px) {
   #sub-nav .second-menu ul {
     height: auto;
     background-image: none;
@@ -394,7 +402,7 @@ body {
   white-space: nowrap;
   width: auto;
 }
-@media only screen and (max-device-width : 650px) {
+@media screen and (max-width: 650px) {
   #sub-nav .second-menu ul li {
     width: 100% !important;
   }
@@ -658,7 +666,7 @@ headerimage_none_color {
   left: 0;
   right: 0;
 }
-@media only screen and (max-device-width : 650px) {
+@media screen and (max-width: 650px) {
   #container {
     width: 100%;
     padding: 0px;
@@ -1011,49 +1019,47 @@ headerimage_none_color {
   margin-top: 1em;
 }
 .cc_footer_menu {
-   margin-top: 2em;
-   border-right: 1px solid black;
-   border-left: 1px solid black;
-   padding-left: 2em
-
+  margin-top: 2em;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding-left: 2em;
 }
 .footer-menu li {
   display: block;
-  padding-top:0.3em;
+  padding-top: 0.3em;
   width: 10em;
 }
 .footer-menu li a {
   border: none;
   padding: 0;
-  font-size:11px;
+  font-size: 11px;
 }
-.footer-menu li a:hover{
-    text-decoration: underline;
+.footer-menu li a:hover {
+  text-decoration: underline;
 }
 .footer-menu > li:nth-child(1n+0),
-.footer-menu > li:nth-child(3n+0){
+.footer-menu > li:nth-child(3n+0) {
   float: left;
 }
-
-#cc_subscribe{
-    margin: 2em 2em 1em 2em;
+#cc_subscribe {
+  margin: 2em 2em 1em 2em;
 }
-#cc_subscribe p{
-    font-size: 1.5em;
-    color: #5FAA3A;
-    font-weight: bold;
-    display: inline;
-    padding-left: 0.5em;
+#cc_subscribe p {
+  font-size: 1.5em;
+  color: #5FAA3A;
+  font-weight: bold;
+  display: inline;
+  padding-left: 0.5em;
 }
-
 #cc_subscribe > a:hover {
-    color: #5FAA3A;
-    text-decoration: underline;
-    text-decoration-color: #5FAA3A;
+  color: #5FAA3A;
+  text-decoration: underline;
+  text-decoration-color: #5FAA3A;
 }
 #cc_signature {
-    text-align:center;
-    padding-bottom: 0.3em;
-
+  text-align: center;
+  padding-bottom: 0.3em;
 }
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

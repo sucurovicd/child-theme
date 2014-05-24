@@ -64,7 +64,7 @@ function nav_bar($page_id){
     if (is_woocommerce()){
         ?> <div class="row" id="sub-nav">
             <div class="second-menu">
-                <button type="button" id="second-menu-toggle" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> </button>
+                    <button type="button" id="second-menu-toggle" class="btn btn-primary">Sub-menu</button>
                 
                 <?php
                 if( has_nav_menu( 'sub-header-menu', 'responsive' ) ) { ?>
@@ -107,7 +107,7 @@ function nav_bar($page_id){
             ?>
             <div class="row" id="sub-nav">
                 <div class="second-menu">
-                    <button type="button" id="second-menu-toggle" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> </button>
+                    <button type="button" id="second-menu-toggle" class="btn btn-primary">Sub-menu</button>
                     <ul id="collapsable">
                         <?php
                         foreach ($write as $w)
