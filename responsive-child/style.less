@@ -28,6 +28,8 @@
 -------------------------------------------------------------- */
 @tablet:    ~"screen and (max-width: 650px)";
 @mobile:    ~"screen and (max-width: 650px)";
+@under: ~"screen and (max-width: 1000px)";
+@under780: ~"screen and (max-width: 780px)";
 
 body {
   background-color: #ffffff;
@@ -99,14 +101,19 @@ body {
   font-weight: bold;
   color: #000;
   text-shadow: none;
+  @media @tablet{
+      background-color:#f5f5f5;
+  }
 }
 .menu .current_page_item,
 .menu .current-menu-item,
-.main-nav .current-page-ancestor {
+.main-nav .current-page-ancestor
+{
   background-color: #ffffff;
   z-index: 101;
   @media @tablet{
     z-index: 5;
+    background-color:#f5f5f5 !important;
   }
 }
 .menu .current_page_item:hover,
@@ -605,6 +612,7 @@ small {
 .woocommerce-page div.product div.summary {
   width: 60%;
   margin-top: 1em;
+
 }
 .variations_form > table {
   width: 70%;
@@ -700,8 +708,8 @@ headerimage_none_color {
 #content-full h4,
 #content-full h5,
 #content-full h6,
-#content-full p,
-#content-full input[type=text] {
+#content-full p
+ {
   margin-left: 1em;
   margin-right: 1em;
 }
@@ -1017,7 +1025,10 @@ headerimage_none_color {
    margin-top: 2em;
    border-right: 1px solid black;
    border-left: 1px solid black;
-   padding-left: 2em
+   padding-left: 2em;
+       @media @under{
+       display:none;
+   }
 
 }
 .footer-menu li {
@@ -1059,4 +1070,43 @@ headerimage_none_color {
     padding-bottom: 0.3em;
 
 }
+
+#cc-category-content img{
+
+}
+#cc-category-content ul li {
+    @media @under{
+        margin: 0 0.5em;
+    }
+    @media @under780{
+        width:30%;
+        float:left;
+        clear:none;
+        margin: 0 0 0 1em;
+    }
+}
+.woocommerce .product div.images{
+    @media @under780{
+     //   float:left !important;
+     width:80% !important;
+    }
+    @media @tablet{
+        width: 90% !important;
+    }
+}
+.woocommerce .product .summary{
+    @media @under780{
+        width: 100% !important;
+      //  float:right !important;
+    }
+}
+
+.woocommerce .related,
+.woocommerce .products{
+    
+
+
+}
+
+
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

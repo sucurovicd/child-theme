@@ -27,7 +27,7 @@ get_header(); ?>
             <div id="breadcrumb">
                 <?php woocommerce_breadcrumb(); ?>
             </div>
-            <div class="grid col-620 right">
+            <div id="cc-category-content" class="grid col-620 right">
         <?php woocommerce_content(); ?>     
             </div>
             <div class="grid col-300 fit left-sidebar">

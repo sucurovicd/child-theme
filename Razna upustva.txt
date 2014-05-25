@@ -1,3 +1,4 @@
+-Glavni meni mora da se zove Header Menu;
 -U stranice sa sliderom, kada se ubaci prvi slider,uneti ID slajdera. 
 Linija koda izgleda:
 echo do_shortcode("[metaslider id=39]");
@@ -9,3 +10,4 @@ var x = $(location).attr('pathname');
 			$("#menu-item-22").addClass("current-page-ancestor");
 		}
 menu-item-id promeniti na id od prodavnice
+

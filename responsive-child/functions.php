@@ -179,7 +179,7 @@ function style($page_id){
     //Saznajemo koji je root stranice gde se nalazimo
     $pocetak = get_the_title(get_root_parent($page_id));
     //Izlistavamo sve menije
-    $menus = Get_All_Wordpress_Menus()[0]->name;
+    $menus = "Header Menu";
     //Izlistavamo sve podmenije
     $sub_menus = Get_sub_menus($menus);
     //ako je naziv roota trenutne stranice isti sa imenom nekog podmenija, menjamo mu boju

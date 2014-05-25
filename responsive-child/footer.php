@@ -36,7 +36,7 @@ $responsive_options = responsive_get_options();
 		<?php get_sidebar( 'footer' ); ?>
 
 		<div class="grid col-940">
-                    <div id="cc_subscribe" class="grid col-300">
+                    <div class="grid col-300" id="cc_subscribe" >
                         <a href="<?php echo home_url()?>/my-account"><img src="<?php echo dirname(get_bloginfo('stylesheet_url'))?>/images/footer_new.png"><p>Sign up for our newsletter</p></a>
                     </div>
                     
@@ -81,7 +81,7 @@ $responsive_options = responsive_get_options();
 		<script type="text/javascript">
 	$(document).ready(function(){
 		
-
+                
 
 		var x = $(location).attr('pathname');
 		if(x.indexOf("product") != -1){
