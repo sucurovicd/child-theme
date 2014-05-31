@@ -11,3 +11,6 @@ var x = $(location).attr('pathname');
 		}
 menu-item-id promeniti na id od prodavnice
 
+Atributi za novo/polovno:
+
+Condition, New, Used
