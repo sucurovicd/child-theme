@@ -16,8 +16,8 @@ Template Name:  Slider_page_events
 
 get_header(); ?>
 
-<?php
-echo do_shortcode("[metaslider id=278]");
+<?php 
+    echo do_shortcode("[metaslider id=39]"); 
 ?>
 
     <div id="content" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">

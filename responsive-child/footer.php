@@ -35,8 +35,8 @@ $responsive_options = responsive_get_options();
 
 		<?php get_sidebar( 'footer' ); ?>
 
-		<div class="grid col-940">
-                    <div class="grid col-300" id="cc_subscribe" >
+		<div id="footer_div" class="grid col-940">
+                    <div id="cc_subscribe" class="grid col-300">
                         <a href="<?php echo home_url()?>/my-account"><img src="<?php echo dirname(get_bloginfo('stylesheet_url'))?>/images/footer_new.png"><p>Sign up for our newsletter</p></a>
                     </div>
                     
@@ -80,21 +80,23 @@ $responsive_options = responsive_get_options();
 <?php wp_footer(); ?>
 		<script type="text/javascript">
 	$(document).ready(function(){
-		
-                
+	
+
 
 		var x = $(location).attr('pathname');
 		if(x.indexOf("product") != -1){
 			$("#menu-item-24").addClass("current-page-ancestor");
 		}
 
-
+    if($("html").hasClass("no-cssgradients")){
+        alert("You have old version of web broswer, for best expirience use Chrome, Mozila 4+, Safari 5.1+, Opera 15+");
+    }
 	var resp = $('.main-nav ul li').css('float');
 		
-	if(resp == "left"){
-	$('.sub-menu').hide()
+	
+	
 
-}
+
 if(resp == "right")
 {
 	$('.second-menu li').hover(function(){

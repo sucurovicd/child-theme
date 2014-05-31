@@ -27,9 +27,11 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 @tablet:    ~"screen and (max-width: 650px)";
-@mobile:    ~"screen and (max-width: 650px)";
-@under: ~"screen and (max-width: 1000px)";
+@mobile:    ~"screen and (max-width: 500px)";
+@cart:    ~"screen and (max-width: 1000px)";
+@mobilePhone: ~"screen and (max-width: 320px)";
 @under780: ~"screen and (max-width: 780px)";
+
 
 body {
   background-color: #ffffff;
@@ -101,19 +103,19 @@ body {
   font-weight: bold;
   color: #000;
   text-shadow: none;
-  @media @tablet{
+    @media @tablet{
       background-color:#f5f5f5;
   }
+
 }
 .menu .current_page_item,
 .menu .current-menu-item,
-.main-nav .current-page-ancestor
-{
+.main-nav .current-page-ancestor {
   background-color: #ffffff;
   z-index: 101;
   @media @tablet{
     z-index: 5;
-    background-color:#f5f5f5 !important;
+	background-color:#f5f5f5 !important;
   }
 }
 .menu .current_page_item:hover,
@@ -145,6 +147,7 @@ body {
     padding: 0 15px;
     text-align: left;
     text-shadow: none;
+
   }
 
 }
@@ -291,6 +294,7 @@ body {
   background-image: none;
   background-color: transparent;
 }
+
 #sub-nav .second-menu .sub-header-menu ul {
   position: absolute;
   top: 28px;
@@ -307,6 +311,9 @@ body {
   overflow: hidden;
   height: auto;
   min-width: 0;
+  @media @tablet{
+    display: none !important; 
+  }
 }
 #sub-nav .second-menu .sub-header-menu ul .current-menu-item a,
 #sub-nav .second-menu .sub-header-menu ul .current-product_cat-ancestor > a,
@@ -612,7 +619,6 @@ small {
 .woocommerce-page div.product div.summary {
   width: 60%;
   margin-top: 1em;
-
 }
 .variations_form > table {
   width: 70%;
@@ -708,8 +714,7 @@ headerimage_none_color {
 #content-full h4,
 #content-full h5,
 #content-full h6,
-#content-full p
- {
+#content-full p{
   margin-left: 1em;
   margin-right: 1em;
 }
@@ -748,6 +753,9 @@ headerimage_none_color {
   text-transform: uppercase;
   letter-spacing: 1px;
   max-width: 56px;
+  @media @mobilePhone{
+    margin-top: 5px;
+  }
 }
 .widget_search input[type=text] {
   background: #fff;
@@ -954,6 +962,10 @@ headerimage_none_color {
   text-align: center;
   width: 20.5%;
   height: 30px;
+  @media @mobile{
+    width: 100%;
+    margin-left: 0px;
+  }
 }
 .short {
   display: block;
@@ -1026,8 +1038,8 @@ headerimage_none_color {
    border-right: 1px solid black;
    border-left: 1px solid black;
    padding-left: 2em;
-       @media @under{
-       display:none;
+   @media @tablet{
+    display:none;
    }
 
 }
@@ -1051,6 +1063,12 @@ headerimage_none_color {
 
 #cc_subscribe{
     margin: 2em 2em 1em 2em;
+    @media @tablet{
+    padding-top: 2em;
+    text-align: center;
+    width: 100%;  
+    }
+    
 }
 #cc_subscribe p{
     font-size: 1.5em;
@@ -1070,12 +1088,25 @@ headerimage_none_color {
     padding-bottom: 0.3em;
 
 }
+#footer_div{
+  @media @tablet{
+    padding-top: 20px;
+  }
+}
+/*
+**********CART TAB*********
+*/
+.cart-tab{
+  @media @cart{
+    display: none;
+  }
+}
 
 #cc-category-content img{
 
 }
 #cc-category-content ul li {
-    @media @under{
+    @media @cart{
         margin: 0 0.5em;
     }
     @media @under780{
@@ -1107,6 +1138,5 @@ headerimage_none_color {
 
 
 }
-
 
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
